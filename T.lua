@@ -1,4 +1,4 @@
-Body ={
+local Body ={
         ["cn"] = {
             ["剑客"] = "剑客",
             ["开启人物速度"] = "开启人物速度",
@@ -178,4 +178,4 @@ Body ={
         }
 }    
 
-return body
+return Body
