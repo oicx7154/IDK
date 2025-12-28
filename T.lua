@@ -1,4 +1,4 @@
-Body{
+Body ={
         ["cn"] = {
             ["剑客"] = "剑客",
             ["开启人物速度"] = "开启人物速度",
@@ -177,3 +177,5 @@ Body{
             ["打开宠物黄金融合机器"] = "Open Golden Machine"
         }
 }    
+
+return body
