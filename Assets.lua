@@ -1,4 +1,4 @@
-local LucideIcon = {	["a-arrow-down"] = "rbxassetid://92867583610071",
+return {["a-arrow-down"] = "rbxassetid://92867583610071",
 	["a-arrow-up"] = "rbxassetid://132318504999733",
 	["a-large-small"] = "rbxassetid://111491496660216",
 	["accessibility"] = "rbxassetid://114029945302017",
@@ -1714,19 +1714,3 @@ local LucideIcon = {	["a-arrow-down"] = "rbxassetid://92867583610071",
 	["zodiac-taurus"] = "rbxassetid://123053219704400",
 	["zodiac-virgo"] = "rbxassetid://99462994613661",
 }
-local function GetAsset(name)
-    if type(name) ~= "string" then
-        warn("Lucide.GetAsset: 预期字符串, 得到 " .. type(name))
-        return ""
-    end
-
-    local assetId = LucideIcons[name]
-
-    if assetId then
-        return assetId
-    end
-
-    warn("Lucide.GetAsset: 未找到名为 '" .. name .. "' 的图标")
-    
-    return LucideIcons["circle-help"] or LucideIcons["circle"] or ""
-end
