@@ -4583,28 +4583,6 @@ function Library:Unload()
     getgenv().Library = nil
 end
 
-local CheckIcon = Library:GetIcon("check")
-local ArrowIcon = Library:GetIcon("chevron-up")
-local OptimizeUpIcon = Library:GetIcon("chevron-up") or ArrowIcon
-local OptimizeDownIcon = Library:GetIcon("chevron-down")
-local ResizeIcon = Library:GetIcon("move-diagonal-2")
-local KeyIcon = Library:GetIcon("key")
-local MoveIcon = Library:GetIcon("move")
-
-function Library:SetIconModule(module: IconModule)
-    FetchIcons = true
-    Icons = module
-
-    -- Top ten fixes 🚀
-    CheckIcon = Library:GetIcon("check")
-    ArrowIcon = Library:GetIcon("chevron-up")
-    OptimizeUpIcon = Library:GetIcon("chevron-up") or ArrowIcon
-    OptimizeDownIcon = Library:GetIcon("chevron-down")
-    ResizeIcon = Library:GetIcon("move-diagonal-2")
-    KeyIcon = Library:GetIcon("key")
-    MoveIcon = Library:GetIcon("move")
-end
-
 local function SetOptimizeIcon(IconLabel: ImageLabel, FallbackLabel: TextLabel, Collapsed: boolean)
     local Icon = Collapsed and OptimizeDownIcon or OptimizeUpIcon
     if Icon then
