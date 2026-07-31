@@ -1,4 +1,5 @@
-return {["a-arrow-down"] = "rbxassetid://92867583610071",
+local LucideIcons = {
+	["a-arrow-down"] = "rbxassetid://92867583610071",
 	["a-arrow-up"] = "rbxassetid://132318504999733",
 	["a-large-small"] = "rbxassetid://111491496660216",
 	["accessibility"] = "rbxassetid://114029945302017",
@@ -1714,3 +1715,4 @@ return {["a-arrow-down"] = "rbxassetid://92867583610071",
 	["zodiac-taurus"] = "rbxassetid://123053219704400",
 	["zodiac-virgo"] = "rbxassetid://99462994613661",
 }
+return LucideIcons
