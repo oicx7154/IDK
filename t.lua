@@ -1660,11 +1660,6 @@ local FetchIcons, Icons = pcall(function()
     ) :: () -> IconModule)()
 end)
 
-local FetchIcons, IconsTable = pcall(function()
-    local content = game:HttpGet(AssetsURL)
-    return loadstring(content)()
-end)
-
 function Library:GetIcon(IconName: string)
     if not FetchIcons then
         return
