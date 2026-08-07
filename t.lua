@@ -1654,40 +1654,29 @@ type IconModule = {
     GetAsset: (Name: string) -> Icon?,
 }
 
-local AssetsURL = "https://raw.githubusercontent.com/oicx7154/IDK/refs/heads/main/Assets.lua"
+local FetchIcons, Icons = pcall(function()
+    return (loadstring(
+        game:HttpGet("https://gitlab.com/upio/lucide-roblox-direct/-/raw/main/source.lua?ref_type=heads")
+    ) :: () -> IconModule)()
+end)
 
 local FetchIcons, IconsTable = pcall(function()
     local content = game:HttpGet(AssetsURL)
     return loadstring(content)()
 end)
 
-function Library:GetIcon(IconName: string): Icon?
-    if type(IconsTable) ~= "table" then
-        return {
-            Url = "",
-            Id = 0,
-            IconName = IconName,
-            ImageRectOffset = Vector2.zero,
-            ImageRectSize = Vector2.zero,
-            Custom = true,
-        }
+function Library:GetIcon(IconName: string)
+    if not FetchIcons then
+        return
     end
 
-    local AssetId = IconsTable[IconName]
-    
-    if not AssetId then
-        AssetId = "rbxassetid://0" 
+    local Success, Icon = pcall(Icons.GetAsset, IconName)
+    if not Success then
+        return
     end
-
-    return {
-        Url = AssetId,
-        Id = tonumber(string.match(AssetId, "%d+")) or 0,
-        IconName = IconName,
-        ImageRectOffset = Vector2.zero,
-        ImageRectSize = Vector2.zero,
-        Custom = true,
-    }
+    return Icon
 end
+
 function Library:GetCustomIcon(IconName: string): any
     if not IconName then
         return nil
