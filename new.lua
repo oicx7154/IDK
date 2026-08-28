@@ -1,3 +1,6 @@
+
+-- example script by https://github.com/mstudio45/LinoriaLib/blob/main/Example.lua and modified by deivid
+-- You can suggest changes with a pull request or something
 local cloneref = (cloneref or clonereference or function(instance: any)
     return instance
 end)
@@ -17422,14 +17425,12 @@ function Library:CreateWindow(WindowInfo)
 
     function Window:SetBorder(Info)
         Info = Info or {}
-
         if Info.Color then
-
-
     if UseDynamicIslandToggle and WindowInfo.ShowMobileButtons ~= false then
         DynamicIslandController = CreateDynamicIslandToggle()
         if DynamicIslandController then
             DynamicIslandController:SetActive(Library.Toggled)
+            end
         end
     end
 
@@ -19084,6 +19085,6 @@ function Library:Unload()
 
     getgenv().Library = nil
 end
-
+end
 getgenv().Library = Library
 return Library
