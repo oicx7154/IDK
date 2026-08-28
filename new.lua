@@ -16592,7 +16592,7 @@ function Library:CreateWindow(WindowInfo)
     end
 
     do
-        FullscreenBackground.Visible = WindowInfo.FullscreenBackground == true
+        FullscreenBackground.Visible = true
         FullscreenBackground.BackgroundColor3 = WindowInfo.FullscreenBackgroundColor
         FullscreenBackground.BackgroundTransparency = WindowInfo.FullscreenBackgroundTransparency
         WindowInfo.FullscreenBackgroundImage =
