@@ -1,8 +1,8 @@
 return function(config)
-    local HttpService = game:GetService("HttpService")
+    local HttpService = cloneref(game:GetService("HttpService"))
 
     local url = config.JsonUrl
-    local dev = tostring(config.Dev or "L")
+    local dev = tostring(config.Dev)
     local gameId = tostring(game.GameId)
 
     local choices = {}
