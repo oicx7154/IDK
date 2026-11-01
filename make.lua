@@ -111,7 +111,7 @@ return function(config)
     
     local image = config.ImageBox:AddImage("", {
         Image = imageId,
-        Height = 200,
+        Height = 150,
         Transparency = 0,
         BackgroundTransparency = 0,
     })
