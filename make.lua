@@ -114,7 +114,7 @@ return function(config)
         Height = 200,
         Transparency = 0,
         BackgroundTransparency = 0,
-        ScaleType = Enum.ScaleType.Fill,
+        ScaleType = Enum.ScaleType.Stretch,
     })
     return announcementLabel, dropdown,image
 end
