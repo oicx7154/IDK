@@ -111,9 +111,10 @@ return function(config)
     
     local image = config.ImageBox:AddImage("", {
         Image = imageId,
-        Height = 150,
+        Height = 200,
         Transparency = 0,
         BackgroundTransparency = 0,
+        ScaleType = Enum.ScaleType.Fill
     })
     return announcementLabel, dropdown,image
 end
