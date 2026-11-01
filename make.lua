@@ -96,6 +96,24 @@ return function(config)
     if hasEntries then
         showEntry(entryByChoice[choices[defaultIndex]])
     end
-
-    return announcementLabel, dropdown
+    local imageId = config.DefaultImage or "rbxassetid://71686922157317"
+    
+    local imageOk, imageData = pcall(function()
+        local raw = game:HttpGet(config.ImageJsonUrl)
+        return HttpService:JSONDecode(raw)
+    end)
+    
+    if imageOk and type(imageData) == "table" then
+        if type(imageData.image) == "string" and imageData.image ~= "" then
+            imageId = imageData.image
+        end
+    end
+    
+    local image = config.ImageBox:AddImage("", {
+        Image = imageId,
+        Height = 200,
+        Transparency = 0,
+        BackgroundTransparency = 0,
+    })
+    return announcementLabel, dropdown,image
 end
