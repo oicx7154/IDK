@@ -1,39 +1,19 @@
 {
-  "developers": {
-    "L": {
-      "latest": "16.0",
-      "updates": [
-        {
-          "date": "2026/11/1",
-          "version": "16.0",
-          "content": "L 的 16.0 更新内容。"
-        },
-        {
-          "date": "2026/10/7",
-          "version": "15.9",
-          "content": "L 的 15.9 更新内容。"
+  "games": {
+    "249271746647": {
+      "name": "一个字面上的底板。",
+      "developers": {
+        "L": {
+          "latest": "16.0",
+          "updates": [
+            {
+              "date": "2026/11/1",
+              "version": "16.0",
+              "content": "整个体验共用的更新公告。"
+            }
+          ]
         }
-      ]
-    },
-    "月星": {
-      "latest": "2.0",
-      "updates": [
-        {
-          "date": "2026/11/1",
-          "version": "2.0",
-          "content": "月星的更新内容。"
-        }
-      ]
-    },
-    "初夏": {
-      "latest": "1.0",
-      "updates": [
-        {
-          "date": "2026/11/1",
-          "version": "1.0",
-          "content": "初夏的更新内容。"
-        }
-      ]
+      }
     }
   }
 }
